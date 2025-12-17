@@ -1,4 +1,4 @@
-{% Extends "base.html" %}
+{% extends "base.html" %}
 
 
 {% block title %}
@@ -6,7 +6,8 @@
 {% endblock %}
 
 {% block content %}
-   
+   {% include './includes/partial.html' %}
+
 
     <ul>
         
@@ -15,4 +16,5 @@
         {% endfor %}
             
     </ul>
+    {% include './includes/endpartial.html' with days=days name='Gerardo' %}
 {% endblock content %}
