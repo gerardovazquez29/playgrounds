@@ -11,7 +11,7 @@
     <ul>
         
         {% for day in days %}
-            {{day}}
+            <li><a href="{% url 'day-quote' day %}">{{day}}</a></li>
         {% endfor %}
             
     </ul>

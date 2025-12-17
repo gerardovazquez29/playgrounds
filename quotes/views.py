@@ -15,13 +15,7 @@ days_of_week = {
 }
 
 def index(request):
-    list_items = ''
     days = list(days_of_week.keys())
-    for day in days:
-        day_path = reverse('day-quote',args=[day])
-        list_items += f"<li><a href='{day_path}'>{day}</a></li>"
-    
-   
     return render(request,"quotes/quotes.html", {
         "days": days
     })
