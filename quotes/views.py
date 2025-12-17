@@ -21,8 +21,10 @@ def index(request):
         day_path = reverse('day-quote',args=[day])
         list_items += f"<li><a href='{day_path}'>{day}</a></li>"
     
-    response_html = f"<ul>{list_items}</ul>"
-    return HttpResponse(response_html)
+   
+    return render(request,"quotes/quotes.html", {
+        "days": days
+    })
 
 
 

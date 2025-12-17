@@ -1,0 +1,18 @@
+{% Extends "base.html" %}
+
+
+{% block title %}
+   Listado de Quotes 
+{% endblock %}
+
+{% block content %}
+   
+
+    <ul>
+        
+        {% for day in days %}
+            {{day}}
+        {% endfor %}
+            
+    </ul>
+{% endblock content %}
